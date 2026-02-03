@@ -1,14 +1,20 @@
-from fastapi import APIRouter
-from app.services.pressure_service import calculate_pressure
+from fastapi import APIRouter, Query
+from app.services.pressure_service import predict_emergency_pressure
 
 router = APIRouter()
 
 @router.get("/predict-pressure")
-def predict_pressure(accidents: int, ambulance_load: int):
-    result = calculate_pressure(accidents, ambulance_load)
+def predict_pressure(
+    accidents: int = Query(..., ge=0),
+    ambulance_load: int = Query(..., ge=0)
+):
+    """
+    Predict emergency overload pressure.
+    Includes validation + alert support.
+    """
 
-    return {
-        "accidents_reported": accidents,
-        "ambulance_load": ambulance_load,
-        "predicted_pressure": result
-    }
+    if accidents > 500:
+        return {"error": "Accident count too high for MVP limit"}
+
+    return predict_emergency_pressure(accidents, ambulance_load)
+
