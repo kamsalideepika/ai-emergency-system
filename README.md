@@ -1,254 +1,212 @@
 # 🚑 AI Emergency Pressure & Ambulance Load Prediction System
 
-## 📌 Project Title
-**AI Emergency Pressure & Ambulance Load Prediction System**
-## 👩‍💻 Author
+## 📌 Project Overview
 
-**Deepika K**  
-B.Tech Student | Aspiring Software Engineer  
+The **AI Emergency Pressure & Ambulance Load Prediction System** is an AI-driven emergency preparedness framework designed to help hospitals and emergency authorities predict sudden Emergency Department (ED) overloads.
 
-GitHub: https://github.com/kamsalideepika  
-LinkedIn: https://www.linkedin.com/in/deepikakamsali/
+The system analyzes:
 
----
+- Accident history  
+- Ambulance arrival patterns  
+- Seasonal/Festival spikes  
+- Zone-based hotspot risk  
+- Emergency pressure forecasting  
 
-## 📖 Project Description
-
-The **AI Emergency Pressure & Ambulance Load Prediction System** is an AI-driven healthcare support platform designed to assist hospitals and emergency response authorities in predicting sudden Emergency Department (ED) overload situations.
-
-In real-world emergency scenarios, hospitals often face unexpected surges due to:
-
-- Road accidents  
-- Seasonal disease outbreaks  
-- Festival or public event emergencies  
-- Weather-related incidents  
-- High ambulance arrival density  
-
-This system helps reduce emergency chaos by providing early predictions and insights so that hospitals can prepare resources in advance.
+This helps reduce chaos, improve response readiness, and optimize hospital and ambulance resource allocation.
 
 ---
 
-## 🎯 Problem Statement
+# ✅ Phase 1: Core Implementation & Foundation (MVP)
 
-Hospitals and emergency services frequently struggle with:
+Phase 1 focused on building the minimum viable product (MVP) foundation.
 
-- Sudden overload of emergency patients  
-- Ambulance congestion at specific hospitals  
-- Lack of early warning systems  
-- Poor allocation of staff and beds during peak emergencies  
-- No clear identification of accident hotspot zones  
 
-This project aims to solve these challenges by building a prediction-based emergency readiness system.
 
----
+## 🎯 Objective
 
-## ✅ Phase 1: Core Implementation & Foundation
+The system aims to:
 
-Phase 1 focuses on building the **backend foundation** and a working Minimum Viable Product (MVP).
+- Predict emergency pressure on hospitals  
+- Identify accident-prone hotspot zones  
+- Forecast ambulance arrival density  
+- Trigger early alerts for emergency preparedness  
 
-The main goal of Phase 1 is:
 
-- To establish a clean project architecture  
-- Implement the primary entities (data models)  
-- Setup database connectivity  
-- Build basic working APIs for prediction and hotspot detection  
-- Ensure the system is ready for AI/ML integration in later phases  
 
----
+## ✅ Phase 1 Features Implemented
 
-## 🚀 Phase 1 Objectives Achieved
+### Core Entities (Data Models)
 
-In this phase, the following components were successfully implemented:
+- **Hospital**
+- **Accident**
+- **Ambulance Arrival Logs**
 
-### ✅ Project Setup & Architecture
-- FastAPI-based backend server created  
-- Modular folder structure followed (`models`, `routes`, `services`)  
-- Clean separation of logic for scalability  
+### MVP Core Functionalities
 
-### ✅ Database Foundation
-- SQLAlchemy ORM setup  
-- SQLite database used for MVP  
-- Base connection and session handling included  
-
-### ✅ Core Data Models Implemented
-Primary entities required for emergency prediction:
-
-- Hospital Model  
-- Accident Record Model  
-- Ambulance Arrival Log Model  
-
-### ✅ MVP Features Built
-
-#### 1. Emergency Pressure Prediction API
-A basic endpoint that predicts emergency pressure levels based on:
-
-- Accident count  
-- Ambulance arrival load  
-
-#### 2. Accident Hotspot Identification API
-A basic endpoint that returns accident-prone zones using sample logic.
+- Emergency Pressure Prediction API  
+- Accident Hotspot Zone Identification API  
+- FastAPI backend foundation  
+- Clean modular folder structure  
 
 ---
 
-## 🏗️ Project Folder Structure
+# ✅ Phase 2: Logic Expansion & Enhancements
 
+Phase 2 extended the MVP with real-world business logic and scalability improvements.
+
+
+
+## 🎯 Objective
+
+Enhance the system to support:
+
+- Modular architecture separation  
+- Geospatial + time-series modeling readiness  
+- City-level scalability  
+- Dashboard-first visualization support  
+- Real-time alert threshold logic  
+- API-consumable prediction models  
+
+
+
+## ✅ Phase 2 Enhancements Implemented
+
+- Modular structure for backend + ML logic separation  
+- Improved validations and edge-case handling  
+- Accident hotspot detection service improvements  
+- Alert-based emergency pressure prediction logic  
+- Optimized service-layer design for future ML integration  
+
+---
+
+## 🧠 Logic: Emergency Load Forecasting (Future Scope)
+
+Phase 2 forecasting logic includes:
+
+1. Building time-series models for ER pressure prediction  
+2. Modeling seasonal, festival, and weather effects  
+3. Predicting daily/hourly overload windows  
+4. Validating and tuning forecasting accuracy  
+
+---
+
+# ✅ Phase 3: Final Polish, Security & Completion
+
+Phase 3 focused on making the project production-ready.
+
+
+
+## 🎯 Objective
+
+Finalize the application with:
+
+- Security improvements  
+- Better error handling  
+- Deployment readiness  
+- Collaboration preparation  
+
+
+
+## ✅ Phase 3 Completion Updates
+
+- Added stronger validation and alert threshold support  
+- Improved API error response structure  
+- Introduced environment-based configuration using `.env`  
+- Prepared repository for final submission and HealBharat collaboration  
+
+---
+
+# 🛠 Tech Stack
+
+- Python  
+- FastAPI  
+- SQLite (Database)  
+- SQLAlchemy (ORM)  
+- Uvicorn (Server)  
+
+---
+
+# 📂 Project Structure
 ai-emergency-system/
-│
-├── app/
-│ ├── main.py
-│ ├── database.py
-│
-│ ├── models/
-│ │ ├── hospital.py
-│ │ ├── accident.py
-│ │ └── ambulance_log.py
-│
-│ ├── routes/
-│ │ ├── prediction_routes.py
-│ │ └── hotspot_routes.py
-│
-│ ├── services/
-│ │ ├── pressure_service.py
-│ │ └── hotspot_service.py
-│
-├── requirements.txt
-└── README.md
+   app/
+   venv/
+   README.md
+   requirements.txt
+   emergency.db
 
 
 ---
+# ⚙️ Setup Instructions (Local Installation)
 
-## ⚙️ Technologies Used
+Follow the steps below to run the **AI Emergency Pressure & Ambulance Load Prediction System** locally.
 
-The following technologies were used in Phase 1:
+## 🔧 Prerequisites
 
-- **Python 3**
-- **FastAPI** – Web framework for building APIs
-- **Uvicorn** – ASGI server for running FastAPI
-- **SQLAlchemy** – ORM for database modeling
-- **SQLite** – Lightweight database for MVP development
+Make sure you have the following installed:
 
----
-
-## 🛠️ Setup Instructions (Local Installation)
-
-Follow these steps to run the Phase 1 MVP project locally.
+- Python 3.9+
+- pip (Python package manager)
+- Git (optional, for cloning the repository)
+- Virtual environment tool (`venv` or `virtualenv` recommended)
 
 ---
-## 🛠️ Setup Instructions (Local Installation)
 
-
-
-## Follow these steps to run the Phase 1 MVP project locally.
-
+## 📥 Step 1: Clone the Repository
 
 ```bash
-1️⃣ Clone the Repository
-
-git clone https://github.com/kamsalideepika/ai-emergency-system.git
-
-cd ai-emergency-system
-
-2️⃣ Create a Virtual Environment
-
-A virtual environment helps keep project dependencies isolated.
-
-Run the following command inside your project folder:
-
+git clone <repository-url>
+cd ai-emergency-pressure-system
+```
+## 🧪 Step 2: Create & Activate Virtual Environment
+```
+On macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+```
+On Windows
 python -m venv venv
+venv\Scripts\activate
 
-3️⃣ Activate the Virtual Environment
+```
+## 📦 Step 3: Install Dependencies
 
-Activate the environment before installing dependencies.
-
-For Windows PowerShell:
-
-.\venv\Scripts\activate
-
-After activation, your terminal will look like:
-
-(venv) PS C:\Users\ganes\Downloads\ai-emergency-system>
-
-4️⃣ Install Required Dependencies
-
-Install all required Python libraries using:
-
+```
 pip install -r requirements.txt
 
-This installs:
+```
+## 🔐 Step 4: Environment Configuration
+Create a .env file in the project root:
+```
+APP_ENV=development
+DATABASE_URL=sqlite:///./emergency_system.db
+ALERT_THRESHOLD=0.75
 
-FastAPI
+```
+## 🗄️ Step 5: Database Initialization
+If using SQLite (default):
+```
+python init_db.py
 
-Uvicorn
-
-SQLAlchemy
-
-Pydantic
-
-5️⃣ Run the FastAPI Server
-
-Start the backend server using:
-
+```
+## 🚀 Step 6: Run the Application
+Start the FastAPI server using Uvicorn:
+```
 uvicorn app.main:app --reload
 
-Expected output:
+```
+## 🌐 Step 7: Access the API
 
-INFO: Uvicorn running on http://127.0.0.1:8000
+- API Base URL: http://127.0.0.1:8000
+- Interactive API Docs (Swagger UI): http://127.0.0.1:8000/docs
+- Alternative Docs (ReDoc): http://127.0.0.1:8000/redoc
+---
+## 👤 Author & Collaboration
 
-INFO: Application startup complete.
+**Author:** Kamsali Deepika  
+**Email:** kamsalideepika1@gmail.com  
+**GitHub:** https://github.com/kamsalideepika  
 
-6️⃣ Open the API Documentation
+### 🤝 HealBharat Collaboration
 
-Once the server is running, open your browser and visit:
-
-Swagger UI:
-
-http://127.0.0.1:8000/docs
-
-ReDoc Documentation:
-
-http://127.0.0.1:8000/redoc
-
-7️⃣ Test the MVP Endpoints
-Root Endpoint
-
-GET /
-
-Response:
-
-{
-"message": "Phase 1 MVP Running Successfully ✅"
-}
-
-Emergency Pressure Prediction
-
-GET /predict-pressure?accidents=5&ambulance_load=3
-
-Response:
-
-{
-"accidents_reported": 5,
-"ambulance_load": 3,
-"predicted_pressure": "MODERATE ⚠️"
-}
-
-Accident Hotspot Detection
-
-GET /hotspots
-
-Response:
-
-{
-"message": "Accident Hotspot Zones Identified",
-"hotspots": [
-{
-"zone": "Zone-A",
-"accident_count": 3
-},
-{
-"zone": "Zone-B",
-"accident_count": 2
-}
-]
-}
-This repository contains the complete Phase 1 MVP implementation of the
-AI Emergency Pressure & Ambulance Load Prediction System, developed as part of the project requirements.
+This project is prepared for collaboration with **HealBharat** as part of an AI-driven healthcare and emergency preparedness initiative.
