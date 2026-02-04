@@ -13,6 +13,7 @@ def dashboard():
         <body>
             <h2>🚑 AI Emergency Pressure Dashboard</h2>
             <p>Phase 2 Functional Dashboard MVP</p>
+            <p>Status: ✅ Server Running | Phase 3 Ready</p>
 
             <ul>
                 <li><a href="/docs">API Documentation</a></li>

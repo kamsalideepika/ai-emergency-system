@@ -3,6 +3,7 @@ from app.services.pressure_service import predict_emergency_pressure
 
 router = APIRouter()
 
+
 @router.get("/predict-pressure")
 def predict_pressure(
     accidents: int = Query(..., ge=0),
@@ -13,8 +14,17 @@ def predict_pressure(
     Includes validation + alert support.
     """
 
+    # Extra validation (edge-case handling)
     if accidents > 500:
-        return {"error": "Accident count too high for MVP limit"}
+        return {
+            "status": "error",
+            "message": "Accident count too high. Please enter realistic values."
+        }
 
-    return predict_emergency_pressure(accidents, ambulance_load)
+    # Call service logic
+    result = predict_emergency_pressure(accidents, ambulance_load)
 
+    return {
+        "status": "success",
+        "data": result
+    }

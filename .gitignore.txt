@@ -1,4 +1,12 @@
+# Virtual Environment
 venv/
+
+# Python cache
 __pycache__/
 *.pyc
+
+# Database file
 emergency.db
+
+# Environment secrets
+.env
